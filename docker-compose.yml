@@ -111,21 +111,21 @@ services:
     volumes:
       - volume-liferay74-tomcat-data:/opt/liferay/data
       - volume-liferay74-tomcat-1-work:/opt/liferay/tomcat/work
-  liferay74-tomcat-2:
-    build: liferay74-tomcat
-    container_name: liferay74-tomcat-2
-    depends_on:
-      - mysql
-      - es01
-      - es02
-    networks:
-      - network-liferay74-tomcat
-    ports:
-      - 8082:8080
-      - 127.0.0.1:21311:11311
-    volumes:
-      - volume-liferay74-tomcat-data:/opt/liferay/data
-      - volume-liferay74-tomcat-2-work:/opt/liferay/tomcat/work
+#  liferay74-tomcat-2:
+#    build: liferay74-tomcat
+#    container_name: liferay74-tomcat-2
+#    depends_on:
+#      - mysql
+#      - es01
+#      - es02
+#    networks:
+#      - network-liferay74-tomcat
+#    ports:
+#      - 8082:8080
+#      - 127.0.0.1:21311:11311
+#    volumes:
+#      - volume-liferay74-tomcat-data:/opt/liferay/data
+#      - volume-liferay74-tomcat-2-work:/opt/liferay/tomcat/work
   haproxy:
     build: haproxy
     container_name: haproxy
